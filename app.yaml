@@ -1,0 +1,10 @@
+runtime: python311  # Asegúrate de tener la versión correcta de Python
+entrypoint: gunicorn -b :$PORT main:app
+
+handlers:
+- url: /
+  static_files: static/index.html
+  upload: static/index.html
+
+- url: /static
+  static_dir: static

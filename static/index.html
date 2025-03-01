@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis XV Años</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background: url('https://storage.googleapis.com/mis_imagenes_xv_angie/bosque.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(255, 105, 180, 0.8);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 80px auto 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-top: 20px;
+            color: #ff69b4;
+            text-align: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        #map {
+            height: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: rgba(255, 105, 180, 0.8);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .invitation-text {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .invitation-text p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .countdown-container {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            font-size: 1.5em;
+        }
+
+        .location-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #ff69b4;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .location-button:hover {
+            background-color: #ff85c4;
+        }
+    </style>
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Mis XV Años</h1>
+    </header>
+
+    <div class="container">
+        <div class="invitation-text">
+            <p><strong>¡Estimada Familia y amigos!</strong></p>
+	    <p></p>
+	    <p>Estoy muy emocionada de poder compartir con ustedes uno de los días</p><p> más especiales de mi vida: ¡mis XV Años! </p>
+            <p>Han sido 15 años llenos de momentos, aprendizajes, y mucho amor,</p><p> y no podría imaginarme celebrar este gran paso</p> 
+            <p>sin la compañía de personas tan importantes como ustedes.</p>
+	    <p></p>
+            <p>Quiero agradecerles de todo corazón por ser parte de mi vida y </p><p>por acompañarme en este día tan significativo. </p>
+            <p>Cada uno de ustedes ha dejado una huella en mi camino, y me </p><p>encantaria tenerlos ahi, a mi lado, </p>
+            <p>me llenaria de una felicidad inmensa.</p>
+	    <p></p>
+            <p>Espero que disfruten cada momento de esta celebración, porque </p><p>está hecha con mucho cariño y pensando en ustedes.</p> 
+            <p>¡Nos espera una noche mágica y llena de recuerdos inolvidables!</p>
+	    <p></p>
+            <p>Muchas gracias por acompañarnos</p>
+            <p>atte:</p>
+            <p>Angelina Juliette Gil Vizcarra. </p>
+            <h2>Lugar de la Misa:</h2>
+	    <p><strong>Lugar:</strong> Parroquia Nuestra Señora de Guadalupe, Esq Hda Mazatepec y </p> 
+            <p>Hacienda El Lencero, Fraccionamiento Arandas, 44720 Guadalajara, Jal.</p>
+            <p><strong>Hora:</strong> 5:00 PM</p>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=20.694714266920762, -103.28575000475999" target="_blank" class="location-button">Abrir ubicacion de parroquia en Google Maps</a>
+        </div>
+
+        <div class="countdown-container">
+            <p>Faltan:</p>
+            <p><span id="countdown"></p>
+            <p></span> para el gran día!</p>
+        </div>
+
+        <h2>Fotografias de Angelina</h2>
+        <div class="gallery">
+            <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/foto1.jpg" alt="Event Photo 1">
+            <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/foto2.jpg" alt="Event Photo 2">
+            <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/foto3.jpg" alt="Event Photo 3">
+        </div>
+        <h2>Lugar del evento</h2>
+        <p><strong>Lugar:</strong> Av. Malecón 103, Tetlán, 44820 Guadalajara, Jal., México</p>
+        <p><strong>Hora:</strong> 7:00 PM</p>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=20.661991941759602,-103.27059319689582" target="_blank" class="location-button">Abrir ubicacion de terraza en Google Maps</a>
+        <div id="map"></div>
+    </div>
+
+    <footer>
+        <p>&copy; Mis XV Años: Angelina Juliette Gil Vizcarra</p>
+    </footer>
+
+    <script>
+        function updateCountdown() {
+            const eventDate = new Date('July 12, 2025 17:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = `${days} días, ${hours}:${minutes}:${seconds}`;
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('countdown').innerHTML = '¡El gran día ha llegado!';
+            }
+        }
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9yCNCF_blrHx8Y8IqKV7NftZrF51xujA&callback=initMap"></script>
+</body>
+</html>
