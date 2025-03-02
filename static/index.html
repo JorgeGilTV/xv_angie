@@ -53,7 +53,7 @@
             text-align: center;
         }
 
-        .gallery {
+	.gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 15px;
@@ -94,17 +94,6 @@
         footer p {
             margin: 0;
         }
-
-        .invitation-text {
-            text-align: center;
-            margin: 30px 0;
-        }
-
-        .invitation-text p {
-            font-size: 1.2em;
-            margin: 10px 0;
-        }
-
         .countdown-container {
             background-color: #000;
             color: #fff;
@@ -133,40 +122,35 @@
             background-color: #ff85c4;
         }
 
-        .invitation-message p {
-            text-align: center;
-        }
-
         .confirmation-form {
             text-align: center;
-            margin: 30px 0;
+            margin-top: 30px;
         }
 
         .confirmation-form input,
-        .confirmation-form select {
-            padding: 10px;
-            margin: 10px;
+        .confirmation-form select,
+        .confirmation-form button {
+            display: block;
             width: 80%;
-            max-width: 300px;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 1.2em;
             border-radius: 5px;
             border: 1px solid #ccc;
         }
 
         .confirmation-form button {
-            padding: 10px 20px;
             background-color: #ff69b4;
             color: white;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
-            font-size: 1.2em;
+            transition: background-color 0.3s ease;
         }
 
         .confirmation-form button:hover {
             background-color: #ff85c4;
         }
     </style>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -180,7 +164,7 @@
             <p><span id="countdown"></span></p>
             <p>para el gran día!</p>
         </div>
-        <div class="invitation-message">
+<div class="invitation-message">
             <p>Estoy emocionada de compartir con ustedes este día tan especial: <strong>¡mis XV Años!</strong></p>
             <p>Gracias por ser parte de mi vida y por acompañarme en este momento significativo. </p>
             <p>Su presencia me llenará de felicidad.</p>
@@ -520,18 +504,17 @@
         <a href="https://www.google.com/maps/dir/?api=1&destination=20.661991941759602,-103.27059319689582" target="_blank" class="location-button">Abrir ubicación de terraza en Google Maps</a>
 
         <!-- Confirmar asistencia -->
-        <div class="confirmation-form">
-            <h2>¡Confirma tu Asistencia!</h2>
-            <form id="RSVPForm">
-                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
-                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
-                <select id="attendance" name="attendance" required>
-                    <option value="">¿Asistirás?</option>
-                    <option value="yes">Sí</option>
-                    <option value="no">No</option>
-                </select>
-                <button type="submit">Confirmar asistencia</button>
-            </form>
+        <h2>¡Confirma tu Asistencia!</h2>
+        <form id="RSVPForm">
+        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+        <select id="attendance" name="attendance" required>
+            <option value="">¿Asistirás?</option>
+            <option value="yes">Sí</option>
+            <option value="no">No</option>
+        </select>
+        <input type="number" id="guests" name="guests" placeholder="Número de personas (incluyéndote)" min="1" required >
+        <button type="submit">Confirmar asistencia</button>
+        </form>
         </div>
     </div>
 
@@ -540,40 +523,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Inicializar EmailJS con tu usuario
-        emailjs.init("jorgegil708@gmail.com"); // Sustituye con tu ID de usuario EmailJS
-
-        // Manejar el envío del formulario de confirmación
-        document.getElementById('RSVPForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            // Obtener los valores del formulario
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const attendance = document.getElementById('attendance').value;
-
-            // Si el campo de confirmación no está vacío
-            if (attendance) {
-                // Enviar el correo a través de EmailJS
-                const templateParams = {
-                    name: name,
-                    email: email,
-                    attendance: attendance === 'yes' ? 'Sí asistiré' : 'No asistiré'
-                };
-
-                // Enviar el correo usando EmailJS
-                emailjs.send("service_mg9qyps", "template_d22s3k8", templateParams)
-                    .then(function (response) {
-                        alert(`Gracias ${name} por confirmar tu asistencia. Te esperamos el 12 de julio de 2025.`);
-                    }, function (error) {
-                        alert('Ocurrió un error al enviar tu confirmación. Por favor, intenta más tarde.');
-                    });
-            } else {
-                alert('Por favor selecciona si asistirás o no.');
-            }
-        });
-    </script>
     <script>
         // Fecha objetivo del evento
         const eventDate = new Date("July 12, 2025 00:00:00").getTime();
@@ -598,6 +547,37 @@
                 document.getElementById("countdown").innerHTML = "¡El gran día ha llegado!";
             }
         }, 1000);
+
+        // Confirmar asistencia por WhatsApp
+        document.getElementById("attendance").addEventListener("change", function() {
+            const guestsInput = document.getElementById("guests");
+            if (this.value === "yes") {
+                guestsInput.disabled = false;
+                guestsInput.required = true;
+            } else {
+                guestsInput.disabled = true;
+                guestsInput.required = false;
+                guestsInput.value = "";
+            }
+        });
+
+        document.getElementById("RSVPForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const attendance = document.getElementById("attendance").value;
+            const guests = document.getElementById("guests").value || 0;
+            const phoneNumber = "+5213317007579"; // Reemplaza con el número correcto
+
+            if (!name || !attendance || (attendance === "yes" && guests < 1)) {
+                alert("Por favor, completa todos los campos.");
+                return;
+            }
+            const message = attendance === "yes" 
+                ? `Hola, soy ${name}. Confirmo mi asistencia a los XV años con ${guests} persona(s). 🎉`
+                : `Hola, soy ${name}. Lamentablemente no podré(mos) asistir. 😢`;
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappURL, "_blank");
+        });
     </script>
 </body>
 
