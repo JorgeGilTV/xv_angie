@@ -488,7 +488,7 @@
             videoPlayer.load();
             videoPlayer.play();
         });
-
+        let currentIndex = 0;
         function showPhoto(index) {
             const imgs = carousel.querySelectorAll("img");
             imgs.forEach((img, i) => {
@@ -528,7 +528,15 @@
 
         document.getElementById("nextBtn").addEventListener("click", nextPhoto);
         document.getElementById("prevBtn").addEventListener("click", prevPhoto);
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + videos.length) % videos.length;
+            loadVideo(currentIndex);
+        });
 
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % videos.length;
+            loadVideo(currentIndex);
+        });
         // Cambio automático cada 4 segundos
         setInterval(nextPhoto, 4000);
         //confirmacion de asistencia
