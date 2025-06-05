@@ -53,7 +53,7 @@
             text-align: center;
         }
 
-	.gallery {
+	    .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 15px;
@@ -81,13 +81,13 @@
         }
 
         footer {
+            position: static; /* o simplemente elimina esta línea */
+            bottom: auto;     /* eliminar bottom */
+            width: 100%;
             background-color: rgba(255, 105, 180, 0.8);
             color: white;
             text-align: center;
             padding: 15px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
             box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
         }
 
@@ -174,6 +174,16 @@
             p {
                 text-align: center;
                 }
+                #carouselExampleIndicators {
+                    max-width: 700px; /* ancho máximo del carrusel */
+                    margin: 0 auto;
+                }
+
+                #carouselExampleIndicators .carousel-item img {
+                    width: 100%;         /* ancho completo del contenedor */
+                    height: 700px;       /* altura fija */
+                    object-fit: cover;   /* la imagen se recorta si es necesario para llenar */
+                }
     </style>
 </head>
 
@@ -219,323 +229,145 @@
 
         <!-- Carrusel de fotos -->
         <h2>Fotografías de Angelina</h2>
-        <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/foto1.jpg" class="d-block w-100" alt="Event Photo 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/foto2.jpg" class="d-block w-100" alt="Event Photo 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/foto3.jpg" class="d-block w-100" alt="Event Photo 3">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/100_1029.JPG" class="d-block w-100" alt="Event Photo 4"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/100_3778.JPG" class="d-block w-100" alt="Event Photo 5"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/100_3964.JPG" class="d-block w-100" alt="Event Photo 6"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/100_4133.JPG" class="d-block w-100" alt="Event Photo 7"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/100_4141.JPG" class="d-block w-100" alt="Event Photo 8"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20150427_090704.jpg" class="d-block w-100" alt="Event Photo 9"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20150427_103047.jpg" class="d-block w-100" alt="Event Photo 10"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20150503_125925.jpg" class="d-block w-100" alt="Event Photo 11"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20160715_102351.jpg" class="d-block w-100" alt="Event Photo 12"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20160910_191732.jpg" class="d-block w-100" alt="Event Photo 13"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20160910_192700.jpg" class="d-block w-100" alt="Event Photo 14"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20170716_142346.jpg" class="d-block w-100" alt="Event Photo 15"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20170717_090427.jpg" class="d-block w-100" alt="Event Photo 16"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20170806_182959.jpg" class="d-block w-100" alt="Event Photo 17"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20170909_192751.jpg" class="d-block w-100" alt="Event Photo 18"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20171128_152329.jpg" class="d-block w-100" alt="Event Photo 19"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20180121_132443.jpg" class="d-block w-100" alt="Event Photo 20"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20180429_141254.jpg" class="d-block w-100" alt="Event Photo 21"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20180622_090132.jpg" class="d-block w-100" alt="Event Photo 22"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20180622_090252.jpg" class="d-block w-100" alt="Event Photo 23"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20180910_200905.jpg" class="d-block w-100" alt="Event Photo 24"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20190203_184802.jpg" class="d-block w-100" alt="Event Photo 25"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20190420_143853.jpg" class="d-block w-100" alt="Event Photo 26"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20190505_113159.jpg" class="d-block w-100" alt="Event Photo 27"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20190505_121055.jpg" class="d-block w-100" alt="Event Photo 28"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20190505_121059.jpg" class="d-block w-100" alt="Event Photo 29"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20190505_131217.jpg" class="d-block w-100" alt="Event Photo 30"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20190505_132439.jpg" class="d-block w-100" alt="Event Photo 31"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20190505_132619.jpg" class="d-block w-100" alt="Event Photo 32"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20190506_110500.jpg" class="d-block w-100" alt="Event Photo 33"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20190620_092658.jpg" class="d-block w-100" alt="Event Photo 34"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20200805_162005.jpg" class="d-block w-100" alt="Event Photo 35"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/AE (45).jpeg" class="d-block w-100" alt="Event Photo 36"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/AE (47).jpeg" class="d-block w-100" alt="Event Photo 37"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/AE (48).jpeg" class="d-block w-100" alt="Event Photo 38"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/angie.jpg" class="d-block w-100" alt="Event Photo 39"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/FamJorge (131).jpg" class="d-block w-100" alt="Event Photo 40"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/FamJorge (68).jpg" class="d-block w-100" alt="Event Photo 41"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/FamJorge (7).jpg" class="d-block w-100" alt="Event Photo 42"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/FamJorge (71).jpg" class="d-block w-100" alt="Event Photo 43"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0018.jpg" class="d-block w-100" alt="Event Photo 44"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0180.JPG" class="d-block w-100" alt="Event Photo 45"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0296.JPG" class="d-block w-100" alt="Event Photo 46"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0394.jpg" class="d-block w-100" alt="Event Photo 47"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0586.jpg" class="d-block w-100" alt="Event Photo 48"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0724.jpg" class="d-block w-100" alt="Event Photo 49"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0898.jpg" class="d-block w-100" alt="Event Photo 50"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0932.jpg" class="d-block w-100" alt="Event Photo 51"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0938.jpg" class="d-block w-100" alt="Event Photo 52"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0939.jpg" class="d-block w-100" alt="Event Photo 53"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0944.jpg" class="d-block w-100" alt="Event Photo 54"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_1050.jpg" class="d-block w-100" alt="Event Photo 55"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_1303.jpg" class="d-block w-100" alt="Event Photo 56"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_1621.jpg" class="d-block w-100" alt="Event Photo 57"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_1756.JPG" class="d-block w-100" alt="Event Photo 58"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_1797.jpg" class="d-block w-100" alt="Event Photo 59"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_20170305_114112587.jpg" class="d-block w-100" alt="Event Photo 60"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_20170409_135517110.jpg" class="d-block w-100" alt="Event Photo 61"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_20181116_213137.jpg" class="d-block w-100" alt="Event Photo 62"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_20211027_151815.jpg" class="d-block w-100" alt="Event Photo 63"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_20211029_222132.jpg" class="d-block w-100" alt="Event Photo 64"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_20211031_172748.jpg" class="d-block w-100" alt="Event Photo 65"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_20220410_175030.jpg" class="d-block w-100" alt="Event Photo 66"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_20220515_161740.jpg" class="d-block w-100" alt="Event Photo 67"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_20220522_133757.jpg" class="d-block w-100" alt="Event Photo 68"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_20220716_120321.jpg" class="d-block w-100" alt="Event Photo 69"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_20220731_123308.jpg" class="d-block w-100" alt="Event Photo 70"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_20220801_134956.jpg" class="d-block w-100" alt="Event Photo 71"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_20220910_140934.jpg" class="d-block w-100" alt="Event Photo 72"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_20220910_141019.jpg" class="d-block w-100" alt="Event Photo 73"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_20230101_145155.jpg" class="d-block w-100" alt="Event Photo 74"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_20240330_111935.jpg" class="d-block w-100" alt="Event Photo 75"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_2050.jpg" class="d-block w-100" alt="Event Photo 76"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_2232.jpg" class="d-block w-100" alt="Event Photo 77"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_2401.jpg" class="d-block w-100" alt="Event Photo 78"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG-20150513-WA0021.jpg" class="d-block w-100" alt="Event Photo 79"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG-20150513-WA0023.jpg" class="d-block w-100" alt="Event Photo 80"> 
-				</div>
-					<div class="carousel-item">
-                    <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG-20180824-WA0026(1).jpg" class="d-block w-100" alt="Event Photo 81"> 
-				</div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="carouselImages">
+              <!-- Las imágenes se insertarán aquí -->
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+      
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
             </button>
+          </div>
         </div>
+      
+        <!-- Scripts de Bootstrap 5 y JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+      
+        <script>
+          const imageUrls = [
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/foto1.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/foto2.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/foto3.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/100_1029.JPG",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/100_3778.JPG",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/100_3964.JPG",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/100_4133.JPG",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/100_4141.JPG",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20150427_090704.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20150427_103047.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20150503_125925.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20160715_102351.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20160910_191732.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20160910_192700.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20170716_142346.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20170717_090427.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20170806_182959.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20170909_192751.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20171128_152329.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20180121_132443.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20180429_141254.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20180622_090132.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20180622_090252.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20180910_200905.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20190203_184802.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20190420_143853.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20190505_113159.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20190505_121055.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20190505_121059.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20190505_131217.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20190505_132439.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20190505_132619.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20190506_110500.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20190620_092658.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/20200805_162005.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/AE (45).jpeg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/AE (47).jpeg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/AE (48).jpeg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/angie.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/FamJorge (131).jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/FamJorge (68).jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/FamJorge (7).jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/FamJorge (71).jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0018.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0180.JPG",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0296.JPG",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0394.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0586.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0724.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0898.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0932.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0938.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0939.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0944.jpg",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_1050.jpg"
+          ];
+        
+          const carouselInner = document.getElementById("carouselImages");
+        
+          imageUrls.forEach((url, index) => {
+            const div = document.createElement("div");
+            div.className = `carousel-item${index === 0 ? " active" : ""}`;
+        
+            const img = document.createElement("img");
+            img.src = url;
+            img.className = "d-block w-100";
+            img.alt = `Event Photo ${index + 1}`;
+        
+            div.appendChild(img);
+            carouselInner.appendChild(div);
+          });
+        </script>
 
         <h2>Videos de Angelina</h2>
-        <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <video class="d-block w-100" controls>
-                        <source src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0898.MP4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="carousel-item"> 
-                    <video class="d-block w-100" controls> 
-                        <source src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0394.MP4" type="video/mp4"> 
-                        Your browser does not support the video tag.
-                    </video> 
-				</div>
 
-				<div class="carousel-item"> 
-                    <video class="d-block w-100" controls> 
-                        <source src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_2401.MP4" type="video/mp4"> 
-                        Your browser does not support the video tag.
-                    </video> 
-				</div>
-
-				<div class="carousel-item"> 
-                    <video class="d-block w-100" controls> 
-                        <source src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_2050.MP4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video> 
-				</div>
-
-				<div class="carousel-item"> 
-                    <video class="d-block w-100" controls> 
-                        <source src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_1797.MP4" type="video/mp4"> 
-                        Your browser does not support the video tag.
-                    </video> 
-				</div>
-
-				<div class="carousel-item"> 
-                    <video class="d-block w-100" controls> 
-                        <source src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_1621.MP4" type="video/mp4"> 
-                        Your browser does not support the video tag.
-                    </video> 
-				</div>
-
-				<div class="carousel-item"> 
-                    <video class="d-block w-100" controls> 
-                        <source src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_1303.MP4" type="video/mp4"> 
-                        Your browser does not support the video tag.
-                    </video> 
-				</div>                
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+        <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+        <video id="videoPlayer" width="700" height="500" controls style="background-color: black; object-fit: cover;">
+            <source src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0898.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <br />
+        <button id="prevBtn" style="width: 150px; height: 40px; font-size: 16px; margin: 10px;">Anterior</button>
+        <button id="nextBtn" style="width: 150px; height: 40px; font-size: 16px; margin: 10px;">Siguiente</button>
         </div>
 
+        <script>
+        const videos = [
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0898.MP4",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0394.MP4",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_2401.MP4",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_2050.MP4",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_1797.MP4",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_1621.MP4",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_1303.MP4"
+        ];
+
+        let currentIndex = 0;
+        const videoPlayer = document.getElementById('videoPlayer');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function loadVideo(index) {
+            videoPlayer.src = videos[index];
+            videoPlayer.load();
+            videoPlayer.play();
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + videos.length) % videos.length;
+            loadVideo(currentIndex);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % videos.length;
+            loadVideo(currentIndex);
+        });
+        </script>
         <h2>Lugar del evento</h2>
         <p><strong>Lugar:</strong> Av. Malecón 103, Tetlán, 44820 Guadalajara, Jal., México</p>
         <p><strong>Hora:</strong> 7:00 PM</p>
