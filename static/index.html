@@ -522,6 +522,15 @@
                             <div class="nombre-box">Genaro Vizcarra Chavez</div>
                         </div>
                     </div>
+                    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin-top: 30px;">
+                        <div class="foto-box">
+                            <video autoplay muted loop playsinline style="max-width: 300px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+                                <source src="https://storage.googleapis.com/mis_imagenes_xv_angie/mama nina.mp4" type="video/mp4">
+                                Tu navegador no soporta videos HTML5.
+                            </video>
+                            <div class="nombre-box">Enedina Morales</div>
+                        </div>
+                    </div>
                 </div>
                 <hr class="divider" />
             <h2 class="section-title"><strong>Galería de Fotos</strong></h2>
@@ -534,7 +543,7 @@
             <h2 class="section-title"><strong>Galería de Videos</strong></h2>
             <div id="video-carousel" style="max-width: 800px; margin: 40px auto; position: relative;">
                 <video id="videoPlayer" width="100%" height="500" controls style="background-color: black; object-fit: cover; border-radius: 12px;">
-                    <source src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0898.MP4" type="video/mp4">
+                    <source src="https://storage.googleapis.com/mis_imagenes_xv_angie/mama nina.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <button id="videoPrevBtn" class="carousel-button" style="left: 10px;">&#10094;</button>
@@ -667,7 +676,7 @@
           ];
           const videoSources  = [
             "https://storage.googleapis.com/mis_imagenes_xv_angie/mama nina.mp4",
-            "https://storage.googleapis.com/mis_imagenes_xv_angie/genarovc.MP4"
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/genarovc.mp4"
         ];
         const carousel = document.getElementById("carousel");
         const indicators = document.getElementById("indicators");
@@ -736,8 +745,8 @@
             currentIndex = (currentIndex + 1) % videos.length;
             loadVideo(currentIndex);
         });
-        // Cambio automático cada 4 segundos
-        setInterval(nextPhoto, 4000);
+        // Cambio automático cada 10 segundos
+        setInterval(nextPhoto, 10000);
         //confirmacion de asistencia
         document.getElementById('RSVPForm').addEventListener('submit', function (e) {
             e.preventDefault(); // Evita que el formulario se envíe normalmente
@@ -768,7 +777,8 @@
 
 
 <footer>
-<p>&copy; Mis XV Años: Angelina Juliette Gil Vizcarra</p>
+<p>&copy; Mis XV Años: Angelina Juliette Gil Vizcarra </p>
+<P> Made by: Jorge Gil</P>
 </footer>
 
 </body>
