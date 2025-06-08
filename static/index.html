@@ -38,21 +38,30 @@
             line-height: 1.2;
             text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
         }
-        .header-slideshow {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            z-index: 1;
-        }
         .header-slideshow img {
             position: absolute;
+            max-height: 800px; /* o el tamaño que prefieras */
             max-width: 100%;
             height: auto;
+            width: auto;
             object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            display: none;
             top: 0;
             left: 0;
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
+
+        .header-slideshow img.active {
+            display: block;
+            margin: 0 auto;
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: 1;
+        }
+        
         .header-slideshow img.active {
             opacity: 1;
             z-index: 2;
@@ -167,6 +176,9 @@
         /* Carrusel simple */
         #carousel {
             max-width: 800px;
+            max-height: 60%;
+            width: auto;
+            height: auto;
             margin: 40px auto;
             position: relative;
             border-radius: 12px;
@@ -287,6 +299,7 @@
         .foto-box {
             display: inline-block;
             margin: 0 10px;
+            text-align: center;
         }
 
         .foto-box img {
@@ -296,7 +309,7 @@
         }
 
         .nombre-box {
-            background-color: #f8f8f8;
+            background-color: #ffd1dc;
             padding: 8px 12px;
             border-radius: 8px;
             font-weight: bold;
@@ -401,7 +414,7 @@
           headerImages[currentIndex1].classList.remove('active');
           currentIndex1 = (currentIndex1 + 1) % headerImages.length;
           headerImages[currentIndex1].classList.add('active');
-        }, 4000); // cambia cada 4 segundos
+        }, 10000); // cambia cada 4 segundos
     </script>
     <div class="container">
         <h2 class="text-center mt-5"><strong>Cuenta Regresiva para el Evento</strong></h2>
@@ -450,7 +463,7 @@
                     <hr class="divider" />
                     <h2><strong>Lugar de la recepcion:</strong></h2>
                     <div class="foto-box">
-                        <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/ceremonia religiosa.jpg" alt="Templo" />
+                        <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/recepcion.jpg" alt="Recepcion" />
                         <div class="nombre-box"> <p>Terraza Diamonds</p>
                             <p>Av. Malecón 103, Tetlán,</p> 
                             <p>44820 Guadalajara, Jal., México </p>
@@ -499,6 +512,16 @@
                         <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/angelina.jpeg" alt="Angelina López" />
                         <div class="nombre-box">Angelina López</div>
                     </div>
+                   <!-- Video autoreproducido con nombre abajo -->
+                    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin-top: 30px;">
+                        <div class="foto-box">
+                            <video autoplay muted loop playsinline style="max-width: 300px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+                                <source src="https://storage.googleapis.com/mis_imagenes_xv_angie/genarovc.mp4" type="video/mp4">
+                                Tu navegador no soporta videos HTML5.
+                            </video>
+                            <div class="nombre-box">Genaro Vizcarra Chavez</div>
+                        </div>
+                    </div>
                 </div>
                 <hr class="divider" />
             <h2 class="section-title"><strong>Galería de Fotos</strong></h2>
@@ -508,8 +531,6 @@
                 <button id="nextBtn" class="carousel-button">&#10095;</button>
                 <div id="indicators"></div>
             </div>
-            <a href="https://photos.google.com/share/AF1QipOVlZporLBo_iufEkHwOCsyO262iwQLFROdbgQTCxMDIwJKMhx3mP4Y2FzQfFvNuA?key=SmVNelJvSmpHRWJITmhsRkZQTGlNbkcwQmxvWDFn" target="_blank" class="gallery-button">Ver todas las fotos</a>
-            <hr class="divider" />
             <h2 class="section-title"><strong>Galería de Videos</strong></h2>
             <div id="video-carousel" style="max-width: 800px; margin: 40px auto; position: relative;">
                 <video id="videoPlayer" width="100%" height="500" controls style="background-color: black; object-fit: cover; border-radius: 12px;">
@@ -645,13 +666,8 @@
             "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/MMM_3577.jpg"
           ];
           const videoSources  = [
-            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0898.MP4",
-            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_0394.MP4",
-            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_2401.MP4",
-            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_2050.MP4",
-            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_1797.MP4",
-            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_1621.MP4",
-            "https://storage.googleapis.com/mis_imagenes_xv_angie/xv/IMG_1303.MP4"
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/mama nina.mp4",
+            "https://storage.googleapis.com/mis_imagenes_xv_angie/genarovc.MP4"
         ];
         const carousel = document.getElementById("carousel");
         const indicators = document.getElementById("indicators");
