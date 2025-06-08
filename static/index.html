@@ -295,17 +295,37 @@
         .foto-container {
         text-align: center;
         }
+        
+        .lugares-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
 
         .foto-box {
-            display: inline-block;
-            margin: 0 10px;
+            max-width: 400px;
+            flex: 1 1 300px;
             text-align: center;
         }
 
+        .location-button {
+            margin-top: 10px;
+            display: inline-block;
+            background-color: #ff69b4;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
         .foto-box img {
-            width: 200px;
+            width: 400px;
             border-radius: 12px;
             margin-bottom: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         .nombre-box {
@@ -448,31 +468,37 @@
                     <p>Con mucho cariño,</p>
                     <p><h2>Angelina Juliette Gil Vizcarra</h2></p>
                     <hr class="divider" />
-                    <h2><strong>Lugar de la Ceremonia:</strong></h2>
-                    <div class="foto-box">
-                        <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/ceremonia religiosa.jpg" alt="Templo" />
-                        <div class="nombre-box"> <p>Parroquia Nuestra Señora de Guadalupe,</p>
-                            <p>Esq Hda Mazatepec y Hacienda El Lencero,</p> 
-                            <p>Fraccionamiento Arandas, </p>
-                            <p>44720 Guadalajara, Jal.</p>
-                            <p><strong>Hora: 6:00 PM</strong></p></div>  
+                    <h2><strong>Lugares del evento:</strong></h2>
+                    <div class="lugares-container">
+                        <!-- Ceremonia -->
+                        <div class="foto-box">
+                            <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/ceremonia%20religiosa.jpg" alt="Templo" />
+                            <div class="nombre-box">
+                                <p>Parroquia Nuestra Señora de Guadalupe,</p>
+                                <p>Esq Hda Mazatepec y Hacienda El Lencero,</p>
+                                <p>Fraccionamiento Arandas, </p>
+                                <p>44720 Guadalajara, Jal.</p>
+                                <p><strong>Hora: 6:00 PM</strong></p>
+                            </div>
                             <a href="https://www.google.com/maps/dir/?api=1&destination=20.694714266920762,-103.28575000475999" target="_blank" class="location-button">
-                                Ubicacion del Templo
-                            </a>   
-                    </div>
-                    <hr class="divider" />
-                    <h2><strong>Lugar de la recepcion:</strong></h2>
-                    <div class="foto-box">
-                        <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/recepcion.jpg" alt="Recepcion" />
-                        <div class="nombre-box"> <p>Terraza Diamonds</p>
-                            <p>Av. Malecón 103, Tetlán,</p> 
-                            <p>44820 Guadalajara, Jal., México </p>
-                            <p><strong>Hora: 8:00 PM</strong></p></div>  
+                                Ubicación del Templo
+                            </a>
+                        </div>
+
+                        <!-- Recepción -->
+                        <div class="foto-box">
+                            <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/recepcion.jpg" alt="Recepción" />
+                            <div class="nombre-box">
+                                <p>Terraza Diamonds</p>
+                                <p>Av. Malecón 103, Tetlán,</p>
+                                <p>44820 Guadalajara, Jal., México</p>
+                                <p><strong>Hora: 8:00 PM</strong></p>
+                            </div>
                             <a href="https://www.google.com/maps/dir/?api=1&destination=20.694714266920762,-103.28575000475999" target="_blank" class="location-button">
-                                Ubicacion del Templo
-                            </a>   
+                                Ubicación de la Recepción
+                            </a>
+                        </div>
                     </div>
-                </div>
                 <hr class="divider" />
                 <h2 class="section-title"><strong>Mis Padres</strong></h2>
                 <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin-top: 30px;">
