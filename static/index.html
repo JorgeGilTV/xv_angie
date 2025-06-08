@@ -280,12 +280,54 @@
             transform: scale(1.05);
             background: linear-gradient(to right, #ff85c4, #ffaad0);
         }
+        .foto-container {
+        text-align: center;
+        }
+
+        .foto-box {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .foto-box img {
+            width: 200px;
+            border-radius: 12px;
+            margin-bottom: 8px;
+        }
+
+        .nombre-box {
+            background-color: #f8f8f8;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .foto-seccion {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .divider {
+            height: 2px;
+            width: 80%;
+            background: linear-gradient(to right, #ffb6c1, #ffffff, #ffb6c1);
+            margin: 10px auto 30px auto;
+            border: none;
+        }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
     <header>
-        <h1><em>Mis XV años <br><br><br><br> Angelina Juliette Gil Vizcarra</em></h1>
+        <h1><em><br><br><br><br><br> Angelina Juliette Gil Vizcarra</em></h1>
         <div class="header-slideshow">
             <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/MMM_3577.jpg" alt="Foto 1" class="active" />
             <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/xv/MMM_3579.jpg" alt="Foto 2" />
@@ -384,27 +426,82 @@
         <div class="container">
             <div class="styled-message">
                 <div class="invitation-message text-center">
-                    <p>Estoy emocionada de compartir con ustedes este día tan especial: <strong>¡mis XV Años!</strong></p>
-                    <p>Gracias por ser parte de mi vida y por acompañarme en este momento significativo.</p>
-                    <p>Su presencia me llenará de felicidad.</p>
-                    <p>Espero que disfruten esta celebración hecha con mucho cariño.</p>
-                    <p><strong>¡Nos espera una noche mágica e inolvidable!</strong></p>
-                    <p>atte:</p>
-                    <p><strong>Angelina Juliette Gil Vizcarra.</strong></p>
-                    <h2><strong>Lugar de la Misa:</strong></h2>
-                    <p><strong>Lugar:</strong> Parroquia Nuestra Señora de Guadalupe, Esq Hda Mazatepec y</p>
-                    <p>Hacienda El Lencero, Fraccionamiento Arandas, 44720 Guadalajara, Jal.</p>
-                    <p><strong>Hora:</strong> 5:00 PM</p>
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=20.694714266920762,-103.28575000475999" target="_blank" class="location-button" id="locationBtn">Abrir ubicación del Templo en Google Maps</a>
-                    <h2><strong>Lugar del evento:</strong></h2>
-                    <p><strong>Lugar:</strong> Av. Malecón 103, Tetlán, 44820 Guadalajara, Jal., México</p>
-                    <p><strong>Hora:</strong> 7:00 PM</p>
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=20.661991941759602,-103.27059319689582" target="_blank" class="location-button">Abrir ubicación de terraza en Google Maps</a>
+                    <hr class="divider" />
+                    <p>💖 ¡Estoy súper emocionada de compartir con ustedes este día tan especial: mis XV Años! 🎉👑</p>
+                    <p>✨ Gracias por ser parte de mi vida y por acompañarme en este momento tan significativo. Su presencia hará que este día sea aún más especial. 🙏💕</p>
+                    <p>😊 Me llenará de alegría verlos ahí, compartiendo risas, abrazos y momentos que quedarán para siempre en mi corazón. 🥰🎶📸</p>
+                    <p>🎀 Esta celebración está hecha con mucho amor, pensando en cada detalle para que la disfrutemos al máximo. 💃🌸🎂</p>
+                    <p>🌟 ¡Nos espera una noche mágica e inolvidable! ✨🌙💫</p>
+                    <p>Con mucho cariño,</p>
+                    <p><h2>Angelina Juliette Gil Vizcarra</h2></p>
+                    <hr class="divider" />
+                    <h2><strong>Lugar de la Ceremonia:</strong></h2>
+                    <div class="foto-box">
+                        <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/ceremonia religiosa.jpg" alt="Templo" />
+                        <div class="nombre-box"> <p>Parroquia Nuestra Señora de Guadalupe,</p>
+                            <p>Esq Hda Mazatepec y Hacienda El Lencero,</p> 
+                            <p>Fraccionamiento Arandas, </p>
+                            <p>44720 Guadalajara, Jal.</p>
+                            <p><strong>Hora: 6:00 PM</strong></p></div>  
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=20.694714266920762,-103.28575000475999" target="_blank" class="location-button">
+                                Ubicacion del Templo
+                            </a>   
+                    </div>
+                    <hr class="divider" />
+                    <h2><strong>Lugar de la recepcion:</strong></h2>
+                    <div class="foto-box">
+                        <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/ceremonia religiosa.jpg" alt="Templo" />
+                        <div class="nombre-box"> <p>Terraza Diamonds</p>
+                            <p>Av. Malecón 103, Tetlán,</p> 
+                            <p>44820 Guadalajara, Jal., México </p>
+                            <p><strong>Hora: 8:00 PM</strong></p></div>  
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=20.694714266920762,-103.28575000475999" target="_blank" class="location-button">
+                                Ubicacion del Templo
+                            </a>   
+                    </div>
                 </div>
-            </div>
-    
+                <hr class="divider" />
+                <h2 class="section-title"><strong>Mis Padres</strong></h2>
+                <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin-top: 30px;">
+                    <div class="foto-box">
+                        <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/jorge.jpeg" alt="Jorge Gil" />
+                        <div class="nombre-box">Jorge Gil</div>
+                    </div>
+                    <div class="foto-box">
+                        <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/Minerva.jpeg" alt="Minerva Vizcarra" />
+                        <div class="nombre-box">Minerva Vizcarra</div>
+                    </div>
+                </div>
+                <hr class="divider" />
+                <h2 class="section-title"><strong>Mis Padrinos</strong></h2>
+                <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin-top: 30px;">
+                    <div class="foto-box">
+                        <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/padrinos.jpeg" alt="Julio y Jessica" />
+                        <div class="nombre-box">Julio Gil y Jessica Correa</div>
+                    </div>
+                </div>
+                <hr class="divider" />
+                <h2 class="section-title"><strong>Mis Abuelos</strong></h2>
+                <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin-top: 30px;">
+                    <div class="foto-box">
+                        <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/cuco.jpeg" alt="Refugio Gil" />
+                        <div class="nombre-box">Refugio Gil</div>
+                    </div>
+                    <div class="foto-box">
+                        <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/rosario.jpeg" alt="Rosario Macías" />
+                        <div class="nombre-box">Rosario Macías</div>
+                    </div>
+                    <div class="foto-box">
+                        <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/cuca.jpeg" alt="Cuca Chávez" />
+                        <div class="nombre-box">Cuca Chávez</div>
+                    </div>
+                    <div class="foto-box">
+                        <img src="https://storage.googleapis.com/mis_imagenes_xv_angie/angelina.jpeg" alt="Angelina López" />
+                        <div class="nombre-box">Angelina López</div>
+                    </div>
+                </div>
+                <hr class="divider" />
             <h2 class="section-title"><strong>Galería de Fotos</strong></h2>
-    
             <div id="carousel">
                 <!-- Las imágenes se insertan aquí con JS -->
                 <button id="prevBtn" class="carousel-button">&#10094;</button>
@@ -412,6 +509,7 @@
                 <div id="indicators"></div>
             </div>
             <a href="https://photos.google.com/share/AF1QipOVlZporLBo_iufEkHwOCsyO262iwQLFROdbgQTCxMDIwJKMhx3mP4Y2FzQfFvNuA?key=SmVNelJvSmpHRWJITmhsRkZQTGlNbkcwQmxvWDFn" target="_blank" class="gallery-button">Ver todas las fotos</a>
+            <hr class="divider" />
             <h2 class="section-title"><strong>Galería de Videos</strong></h2>
             <div id="video-carousel" style="max-width: 800px; margin: 40px auto; position: relative;">
                 <video id="videoPlayer" width="100%" height="500" controls style="background-color: black; object-fit: cover; border-radius: 12px;">
@@ -422,7 +520,21 @@
                 <button id="videoNextBtn" class="carousel-button" style="right: 10px;">&#10095;</button>
             </div>
         </div>
+        <div class="styled-message">
+        <hr class="divider" />
+        <h2><strong>¿Qué es la lluvia de sobres?</strong></h2>
+        <hr class="divider" />
+        <div class="invitation-message text-center">
+            <strong>
+                <p>✨ Si deseas contribuir para que pueda comprar algo especial, estaré muy agradecida. ✨</p>
+                <p>En la entrada de mi evento encontrarás sobres y una cajita de acrílico con mi nombre</p>
+                <p>¡Muchísimas gracias por tu generosidad! 💖</p>            
+            </strong></p>
+        </div>
+    </div>
+    <div class="invitation-message text-center"></div>
         <div class="confirmation-form">
+            <hr class="divider" />
             <h2><strong>Confirmación de Asistencia</strong></h2>
             <form id="RSVPForm">
                 <input type="text" name="Nombre" id="nombre" placeholder="Tu nombre completo" required />
@@ -434,9 +546,10 @@
                 <textarea name="Mensaje" id="mensaje" rows="3" placeholder="Mensaje (opcional)"></textarea>
                 <button type="submit">Enviar por WhatsApp</button>
             </form>
+            </div>
         </div>
     </div>
-
+</div>
     <script>
         // Fechas para el contador
         const countdownDate = new Date("July 12, 2025 17:00:00").getTime();
